@@ -1,0 +1,16 @@
+:root {
+  --md-primary-fg-color:        #343434;
+  --md-primary-fg-color--light: #343434;
+  --md-primary-fg-color--dark:  #343434;
+  --md-accent-fg-color:        #BCA14B;
+  --md-accent-fg-color--light: #BCA14B;
+  --md-accent-fg-color--dark:  #BCA14B;
+}
+
+.md-tabs__link--active, .md-tabs__link:is(:focus, :hover) {
+  color: #BCA14B;
+}
+
+.gold {
+  color: #BCA14B;
+}

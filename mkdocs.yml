@@ -1,0 +1,95 @@
+site_name: ACES Technical Documentation
+copyright: Copyright &copy; 2022 Academy of Motion Picture Arts & Sciences
+
+extra:
+  generator: false
+  version:
+    provider: mike
+
+extra_css:
+  - stylesheets/extra.css
+
+theme:
+  name: material
+  features:
+    - navigation.tabs
+    - navigation.indexes
+    - navigation.tracking
+  font:
+    text: Pontano Sans
+  icon:
+    repo: fontawesome/brands/github
+
+repo_url: https://github.com/ampas/aces-dev
+repo_name: aces-dev
+
+markdown_extensions:
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:mermaid2.fence_mermaid
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.snippets
+  - pymdownx.magiclink
+  - attr_list
+  - md_in_html
+  - abbr
+  - def_list
+  - toc:
+      permalink: true
+      
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+# - https://unpkg.com/mermaid@8.6.4/dist/mermaid.min.js
+  
+plugins:
+  - search
+  - minify:
+      minify_html: true
+  - git-revision-date-localized:
+      type: datetime
+#  - mkpdfs
+# - mermaid2:
+#     version: 8.6.4
+
+nav:
+  - 'ACES Documentation':
+    - 'index.md'
+    - 'System Documentation':
+      - 'system/index.md'
+      - 'Project Organization and Development Procedure': 
+        - 'system/project-organization/index.md'
+      - 'Component Names': 
+        - 'system/component-names/index.md'
+      - 'Look Modification Transforms (LMTs)': 
+        - 'system/lmts/index.md'
+      - 'Alternate Viewing Pipeline': 
+        - 'system/alternate-viewing-pipeline/index.md'
+      - 'Versioning System': 
+        - 'system/versioning-system/index.md'
+      - 'Input Transforms (IDTs)':
+        - 'system/idts/index.md'
+      - 'UX Guidelines':
+        - 'system/ux/index.md'
+      - 'ACES White Point':
+        - 'system/aces-wp/index.md'
+    - 'File Formats':
+      - 'formats/index.md'
+      - 'ACES Metadata File (AMF) Specification': 
+        - 'formats/amf/index.md'
+      - 'Common LUT Format (CLF) Specification': 
+        - 'formats/clf/index.md'
+    - 'Color Encodings':
+      - 'Test': 'encodings/test.md'
+  - 'International Standards':
+    - 'Test': 'standards/index.md'
+  - 'Glossary': 
+    - 'glossary/index.md'
+    
